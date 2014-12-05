@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill_horizontal"
+
+    android:focusable="true" >
+
+    <info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:dropDownVerticalOffset="5dp"
+
+        android:dropDownWidth="match_parent"
+        android:inputType="textAutoComplete" >
+    </info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        android:id="@+id/search_icon"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="false"
+        android:adjustViewBounds="false" />
+
+</RelativeLayout>
