@@ -27,6 +27,45 @@
         <item>@drawable/ic_whats_hot</item>
     </array>
 
+    <array name="categories_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_people</item>
+        <item>@drawable/ic_photos</item>
+        <item>@drawable/ic_communities</item>
+        <item>@drawable/ic_pages</item>
+        <item>@drawable/ic_whats_hot</item>
+    </array>
+    <array name="categories_german">
+        <item>Gemeinsame Sätze</item>
+        <item>Alphabet</item>
+        <item>Zahlen</item>
+        <item>Days,Months,Seasons</item>
+        <item>Time,Weather,Directions</item>
+        <item>Farben</item>
+        <item>Adverbien der Zeit und Manner</item>
+        <item>Family</item>
+        <item>Obst and Gemüse</item>
+        <item>Orte und Materialien</item>
+        <item>Körperteile</item>
+        <item>Pronomen</item>
+        <item>Possessivpronomen</item>
+    </array>
+    <array name="categories_english">
+        <item>Common Phrases</item>
+        <item>Alphabet</item>
+        <item>Numbers</item>
+        <item>Days,Months,Seasons</item>
+        <item>Time,Weather,Directions</item>
+        <item>Colors</item>
+        <item>Adverbs of Time and Manner</item>
+        <item>Family</item>
+        <item>Fruits and Vegetables</item>
+        <item>Places and Materials</item>
+        <item>Orte und Materialien</item>
+        <item>Pronouns</item>
+        <item>Possessives</item>
+    </array>
+
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
 </resources>
