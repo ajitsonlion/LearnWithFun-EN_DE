@@ -34,27 +34,24 @@ import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.WordModel.Categories;
 import info.androidhive.slidingmenu.model.WordModel.FlashCard;
 
-public class HomeFragment extends Fragment {
+public class FlashCardsFragment extends Fragment {
 
 
     ProgressDialog mProgressDialog;
     ArrayList<FlashCard> wordsDatabase=new ArrayList<FlashCard>();
 
-    ArrayList<Categories> wordByCategories;
     SearchInDictionary searchInDictionary;
     SingleScrollListView flipView;
     private ClearableAutoCompleteTextView searchBox;
 	
-	public HomeFragment(){}
+	public FlashCardsFragment(){}
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        if (wordsDatabase.isEmpty()){
-            new GetWordsInBackground().execute();
 
-        }
+
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         View v = inflater.inflate(R.layout.actionbar_search, null);
@@ -69,6 +66,10 @@ public class HomeFragment extends Fragment {
         flipView = (SingleScrollListView) rootView.findViewById(R.id.flip_view);
         searchBox = (ClearableAutoCompleteTextView) v.findViewById(R.id.search_box);
 
+        ArrayList<FlashCard> flashCards=CategoriesFragment.wordByCategories.get(savedInstanceState.getInt("categoryID")).getFlashCards();
+
+        CardAdapter cardAdapter=new CardAdapter(getActivity(),flashCards);
+        flipView.setAdapter(cardAdapter);
         // start with the text view hidden in the action bar
         searchBox.setVisibility(View.INVISIBLE);
         searchIcon.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +100,16 @@ public class HomeFragment extends Fragment {
         actionBar.setCustomView(v);
 
 
+
+        CardAdapter dictionary = new CardAdapter(getActivity(), wordsDatabase);
+
+        flipView.setAdapter(dictionary);
+
+
+        searchInDictionary = new SearchInDictionary(getActivity().getApplicationContext(), wordsDatabase);
+
+
+        searchBox.setAdapter(searchInDictionary);
         return rootView;
     }
 
@@ -143,66 +154,5 @@ public class HomeFragment extends Fragment {
 
     }
 
-    // Title AsyncTask
-    class GetWordsInBackground extends AsyncTask<Void, Void, Void> {
 
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            mProgressDialog = new ProgressDialog(getActivity());
-            mProgressDialog.setCancelable(false);
-             mProgressDialog.setMessage("Loading...");
-            mProgressDialog.setIndeterminate(false);
-            mProgressDialog.show();
-            Log.d("data", "started");
-
-        }
-
-        @Override
-        protected Void doInBackground(Void... params) {
-
-                try {
-                    // Connect to the web site
-
-
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(getActivity().getAssets().open("dictionary.json"), "UTF-8"));
-
-                    Gson gson = new GsonBuilder().create();
-
-                    wordByCategories = gson.fromJson(reader, new TypeToken<ArrayList<Categories>>() {
-                    }.getType());
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            // Set title into TextView
-
-
-            for (Categories c:wordByCategories){
-                wordsDatabase.addAll(c.getFlashCards());
-
-            }
-
-            CardAdapter dictionary = new CardAdapter(getActivity(), wordsDatabase);
-
-            flipView.setAdapter(dictionary);
-
-
-            searchInDictionary = new SearchInDictionary(getActivity().getApplicationContext(), wordsDatabase);
-
-
-            searchBox.setAdapter(searchInDictionary);
-            mProgressDialog.dismiss();
-
-
-        }
-    }
 }

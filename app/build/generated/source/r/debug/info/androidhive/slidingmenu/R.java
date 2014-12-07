@@ -15,7 +15,7 @@ public final class R {
     public static final class array {
         public static final int categories_english=0x7f050000;
         public static final int categories_german=0x7f050001;
-        public static final int categories_icons=0x7f050002;
+        public static final int categories_icon=0x7f050002;
         public static final int nav_drawer_icons=0x7f050003;
         public static final int nav_drawer_items=0x7f050004;
     }
@@ -306,58 +306,87 @@ public final class R {
         public static final int badge_8=0x7f02000d;
         public static final int badge_9=0x7f02000e;
         public static final int counter_bg=0x7f02000f;
-        public static final int ic_communities=0x7f020010;
-        public static final int ic_drawer=0x7f020011;
-        public static final int ic_flip=0x7f020012;
-        public static final int ic_home=0x7f020013;
-        public static final int ic_launcher=0x7f020014;
-        public static final int ic_pages=0x7f020015;
-        public static final int ic_people=0x7f020016;
-        public static final int ic_photos=0x7f020017;
-        public static final int ic_search=0x7f020018;
-        public static final int ic_speak=0x7f020019;
-        public static final int ic_whats_hot=0x7f02001a;
-        public static final int list_item_bg_normal=0x7f02001b;
-        public static final int list_item_bg_pressed=0x7f02001c;
-        public static final int list_selector=0x7f02001d;
-        public static final int progress_bar=0x7f02001e;
-        public static final int rounded_shape=0x7f02001f;
+        public static final int ic_adverb_time=0x7f020010;
+        public static final int ic_alphabett=0x7f020011;
+        public static final int ic_body_parts=0x7f020012;
+        public static final int ic_colors=0x7f020013;
+        public static final int ic_common_phrases=0x7f020014;
+        public static final int ic_communities=0x7f020015;
+        public static final int ic_day_month_season=0x7f020016;
+        public static final int ic_drawer=0x7f020017;
+        public static final int ic_family=0x7f020018;
+        public static final int ic_flip=0x7f020019;
+        public static final int ic_food_meal=0x7f02001a;
+        public static final int ic_fruits_and_vegetables=0x7f02001b;
+        public static final int ic_home=0x7f02001c;
+        public static final int ic_launcher=0x7f02001d;
+        public static final int ic_numbers=0x7f02001e;
+        public static final int ic_pages=0x7f02001f;
+        public static final int ic_people=0x7f020020;
+        public static final int ic_photos=0x7f020021;
+        public static final int ic_places_materials=0x7f020022;
+        public static final int ic_posessive_pronoun=0x7f020023;
+        public static final int ic_pronoun=0x7f020024;
+        public static final int ic_search=0x7f020025;
+        public static final int ic_speak=0x7f020026;
+        public static final int ic_time_weather_direction=0x7f020027;
+        public static final int ic_whats_hot=0x7f020028;
+        public static final int list_item_bg_normal=0x7f020029;
+        public static final int list_item_bg_pressed=0x7f02002a;
+        public static final int list_selector=0x7f02002b;
+        public static final int progress_bar=0x7f02002c;
+        public static final int rounded_corner=0x7f02002d;
+        public static final int rounded_shape=0x7f02002e;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0014;
-        public static final int counter=0x7f0b000f;
+        public static final int action_settings=0x7f0b001f;
+        public static final int counter=0x7f0b0012;
         public static final int drawer_layout=0x7f0b0002;
         public static final int englishWord=0x7f0b000b;
         public static final int flip_icon_back=0x7f0b000c;
         public static final int flip_icon_front=0x7f0b0009;
-        public static final int flip_view=0x7f0b0011;
+        public static final int flip_view=0x7f0b0015;
         public static final int frame_container=0x7f0b0003;
         public static final int germanWord=0x7f0b0007;
-        public static final int icon=0x7f0b000d;
+        public static final int gridView1=0x7f0b0013;
+        public static final int icon=0x7f0b0010;
         public static final int icon_speak=0x7f0b0008;
+        public static final int imageView=0x7f0b0019;
+        public static final int imageView2=0x7f0b001c;
+        public static final int imageView_categories=0x7f0b000d;
         public static final int list_slidermenu=0x7f0b0004;
         public static final int main_activity_card_back=0x7f0b000a;
         public static final int main_activity_card_face=0x7f0b0006;
         public static final int main_activity_root=0x7f0b0005;
+        public static final int scrollView=0x7f0b0018;
         public static final int search_box=0x7f0b0000;
         public static final int search_icon=0x7f0b0001;
-        public static final int search_item_venue_address=0x7f0b0013;
-        public static final int search_item_venue_name=0x7f0b0012;
-        public static final int title=0x7f0b000e;
-        public static final int txtLabel=0x7f0b0010;
+        public static final int search_item_venue_address=0x7f0b0017;
+        public static final int search_item_venue_name=0x7f0b0016;
+        public static final int textView=0x7f0b001a;
+        public static final int textView2=0x7f0b001b;
+        public static final int textView3=0x7f0b001d;
+        public static final int textView4=0x7f0b001e;
+        public static final int textView_english_categories=0x7f0b000e;
+        public static final int textView_german_categories=0x7f0b000f;
+        public static final int title=0x7f0b0011;
+        public static final int txtLabel=0x7f0b0014;
     }
     public static final class layout {
         public static final int actionbar_search=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int cardslayout=0x7f030002;
-        public static final int drawer_list_item=0x7f030003;
-        public static final int fragment_community=0x7f030004;
-        public static final int fragment_find_people=0x7f030005;
-        public static final int fragment_home=0x7f030006;
-        public static final int fragment_pages=0x7f030007;
-        public static final int fragment_photos=0x7f030008;
-        public static final int fragment_whats_hot=0x7f030009;
-        public static final int search_item=0x7f03000a;
+        public static final int categories_each_item_layout=0x7f030003;
+        public static final int drawer_list_item=0x7f030004;
+        public static final int fragment_categories=0x7f030005;
+        public static final int fragment_community=0x7f030006;
+        public static final int fragment_find_people=0x7f030007;
+        public static final int fragment_home=0x7f030008;
+        public static final int fragment_pages=0x7f030009;
+        public static final int fragment_photos=0x7f03000a;
+        public static final int fragment_whats_hot=0x7f03000b;
+        public static final int search_item=0x7f03000c;
+        public static final int show_categories=0x7f03000d;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
@@ -369,6 +398,7 @@ public final class R {
         public static final int desc_list_item_icon=0x7f080002;
         public static final int drawer_close=0x7f080003;
         public static final int drawer_open=0x7f080004;
+        public static final int hello_blank_fragment=0x7f080005;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

@@ -2,6 +2,8 @@ package info.androidhive.slidingmenu;
 
 import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
+import info.androidhive.slidingmenu.model.WordModel.Categories;
+import info.androidhive.slidingmenu.model.WordModel.FlashCard;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -22,36 +24,41 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements CategoriesFragment.OnNewsItemSelectedListener{
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
     ProgressDialog mProgressDialog;
 	// nav drawer title
 	private CharSequence mDrawerTitle;
+    private int categoryID;
 
 	// used to store app title
 	private CharSequence mTitle;
-
+    public static ArrayList<Categories> wordByCategories;
 	// slide menu items
 	private String[] navMenuTitles;
 	private TypedArray navMenuIcons;
 
 	private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
-
+    Bundle savedInstanceState;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+
 		setContentView(R.layout.activity_main);
  		mTitle = mDrawerTitle = getTitle();
 
+        this.savedInstanceState=savedInstanceState;
 		// load slide menu items
 		navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
@@ -111,14 +118,19 @@ public class MainActivity extends Activity {
 			}
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-		if (savedInstanceState == null) {
-			// on first time display view for first nav item
-			displayView(0);
-		}
+        if (savedInstanceState==null){
+            displayView(0);
+        }
 	}
 
-	/**
+    @Override
+    public void onNewsItemPicked(int position) {
+
+ categoryID=position;
+
+    }
+
+    /**
 	 * Slide menu item click listener
 	 * */
 	private class SlideMenuClickListener implements
@@ -171,10 +183,11 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			fragment = new HomeFragment();
+			fragment = new CategoriesFragment();
 			break;
 		case 1:
 			fragment = new FindPeopleFragment();
+
 			break;
 		case 2:
 			fragment = new PhotosFragment();
@@ -235,49 +248,5 @@ public class MainActivity extends Activity {
 	}
 
 
-    // Title AsyncTask
-    class GetWordsInBackground extends AsyncTask<Void, Void, Void> {
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            mProgressDialog = new ProgressDialog(MainActivity.this);
-            mProgressDialog.setCancelable(false);
-            mProgressDialog.setTitle("Android Basic JSoup Tutorial");
-            mProgressDialog.setMessage("Loading...");
-            mProgressDialog.setIndeterminate(false);
-            mProgressDialog.show();
-            Log.d("data", "started");
-
-        }
-
-        @Override
-        protected Void doInBackground(Void... params) {
-            try {
-                // Connect to the web site
-
-
-                BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("dictionary.json"), "UTF-8"));
-
-                Gson gson = new GsonBuilder().create();
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            // Set title into TextView
-
-            // dictionary = CardAdapter.getUICardsFromFlashCards(getApplicationContext(), wordsDatabase);
-
-
-
-        }
-    }
 
 }

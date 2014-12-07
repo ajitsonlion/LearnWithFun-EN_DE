@@ -2,18 +2,18 @@
 <resources>
 
     <string name="app_name">GermanVocab</string>
-     <string name="action_settings">Settings</string>
-      <string name="drawer_open">Slider Menu Opened</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
-        <item >Home</item>
-        <item >Find People</item>
-        <item >Photos</item>
-        <item >Communities</item>
-        <item >Pages</item>
-        <item >What\'s Hot</item>
+        <item>Categories</item>
+        <item>Find People</item>
+        <item>Photos</item>
+        <item>Communities</item>
+        <item>Setting</item>
+        <item>About</item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->
@@ -27,25 +27,18 @@
         <item>@drawable/ic_whats_hot</item>
     </array>
 
-    <array name="categories_icons">
-        <item>@drawable/ic_home</item>
-        <item>@drawable/ic_people</item>
-        <item>@drawable/ic_photos</item>
-        <item>@drawable/ic_communities</item>
-        <item>@drawable/ic_pages</item>
-        <item>@drawable/ic_whats_hot</item>
-    </array>
     <array name="categories_german">
         <item>Gemeinsame Sätze</item>
         <item>Alphabet</item>
         <item>Zahlen</item>
-        <item>Days,Months,Seasons</item>
-        <item>Time,Weather,Directions</item>
+        <item>Kalender &amp; Jahreszeiten</item>
+        <item>Zeit,Wetter,Anreise </item>
         <item>Farben</item>
         <item>Adverbien der Zeit und Manner</item>
         <item>Familie</item>
-        <item>Obst and Gemüse</item>
-        <item>Orte und Materialien</item>
+        <item>Obst &amp; Gemüse</item>
+        <item>Speisen &amp; Mahlzeiten</item>
+        <item>Orte &amp; Materialien</item>
         <item>Körperteile</item>
         <item>Pronomen</item>
         <item>Possessivpronomen</item>
@@ -54,18 +47,37 @@
         <item>Common Phrases</item>
         <item>Alphabet</item>
         <item>Numbers</item>
-        <item>Days,Months,Seasons</item>
+        <item>Calendar &amp; Seasons</item>
         <item>Time,Weather,Directions</item>
         <item>Colors</item>
-        <item>Adverbs of Time and Manner</item>
+        <item>Adverbs of Time &amp; Manner</item>
         <item>Family</item>
-        <item>Fruits and Vegetables</item>
-        <item>Places and Materials</item>
+        <item>Fruits &amp; Vegetables</item>
+        <item>Food &amp; Meal</item>
+        <item>Places &amp; Materials</item>
         <item>Parts of body</item>
         <item>Pronouns</item>
         <item>Possessives</item>
     </array>
+    <array name="categories_icon">
+        <item>@drawable/ic_common_phrases</item>
+        <item>@drawable/ic_alphabett</item>
+        <item>@drawable/ic_numbers</item>
+        <item>@drawable/ic_day_month_season</item>
+        <item>@drawable/ic_time_weather_direction</item>
+        <item>@drawable/ic_colors</item>
+        <item>@drawable/ic_adverb_time</item>
+        <item>@drawable/ic_family</item>
+        <item>@drawable/ic_fruits_and_vegetables</item>
+        <item>@drawable/ic_food_meal</item>
+        <item>@drawable/ic_places_materials</item>
+        <item>@drawable/ic_body_parts</item>
+        <item>@drawable/ic_pronoun</item>
+        <item>@drawable/ic_posessive_pronoun</item>
+    </array>
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
