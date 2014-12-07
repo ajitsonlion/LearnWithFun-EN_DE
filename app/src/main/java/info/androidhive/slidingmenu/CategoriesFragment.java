@@ -1,6 +1,8 @@
 package info.androidhive.slidingmenu;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -106,7 +108,13 @@ public class CategoriesFragment extends Fragment {
 
                 Bundle bundle=new Bundle();
                 bundle.putInt("categoryID",position);
-                fragment.setArguments(bundle);
+
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                FlashCardsFragment llf = new FlashCardsFragment();
+                llf.setArguments(bundle);
+                ft.replace(R.id.frame_container, llf);
+                ft.commit();
 
             }
         });
