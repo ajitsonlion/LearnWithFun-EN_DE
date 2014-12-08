@@ -96,7 +96,6 @@ public class SearchInDictionary extends ArrayAdapter<FlashCard> implements Filte
             protected void publishResults(CharSequence charSequence, FilterResults filterResults)
             {
 
-                filteredCards.addAll((java.util.Collection<? extends FlashCard>) filterResults.values);
 
                 notifyDataSetChanged();
             }

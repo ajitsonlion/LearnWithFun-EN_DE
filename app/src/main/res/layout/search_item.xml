@@ -10,20 +10,20 @@
         android:id="@+id/search_item_venue_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="aaaa"
 
-         android:textSize="20sp"
+         android:textSize="12sp"
         android:layout_weight="1"
-        android:padding="5dp" />
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"  />
  
     <TextView
         android:id="@+id/search_item_venue_address"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="aa"
 
-        android:textSize="20sp"
+        android:textSize="12sp"
         android:layout_weight="1"
-        android:padding="5dp" />
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
  
 </LinearLayout>
