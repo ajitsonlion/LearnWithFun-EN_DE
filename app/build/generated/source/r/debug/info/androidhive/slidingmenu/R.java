@@ -336,7 +336,6 @@ public final class R {
         public static final int list_selector=0x7f02002b;
         public static final int progress_bar=0x7f02002c;
         public static final int rounded_corner=0x7f02002d;
-        public static final int rounded_shape=0x7f02002e;
     }
     public static final class id {
         public static final int action_settings=0x7f0b001f;

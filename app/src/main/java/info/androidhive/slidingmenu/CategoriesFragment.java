@@ -53,13 +53,6 @@ public class CategoriesFragment extends Fragment {
     TypedArray iconForCategory;
     private ArrayList<CategoriesItem> categoriesItems;
 
-    ProgressDialog mProgressDialog;
-    ArrayList<FlashCard> wordsDatabase=new ArrayList<FlashCard>();
-
-    public  static ArrayList<Categories> wordByCategories;
-    SearchInDictionary searchInDictionary;
-    SingleScrollListView flipView;
-    private ClearableAutoCompleteTextView searchBox;
 
     public CategoriesFragment() {
         // Required empty public constructor
@@ -68,11 +61,6 @@ public class CategoriesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (wordByCategories!=null){
-            if (!wordByCategories.isEmpty())
-                new GetWordsInBackground().execute();
-        }
     }
 
     @Override
@@ -104,16 +92,15 @@ public class CategoriesFragment extends Fragment {
                                     int position, long id) {
 
 
-                Toast.makeText(getActivity()," "+position,Toast.LENGTH_LONG).show();
-
                 Bundle bundle=new Bundle();
                 bundle.putInt("categoryID",position);
 
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                FlashCardsFragment llf = new FlashCardsFragment();
-                llf.setArguments(bundle);
-                ft.replace(R.id.frame_container, llf);
+                ft.addToBackStack(null);
+                FlashCardsFragment flashCardsFragment = new FlashCardsFragment();
+                flashCardsFragment.setArguments(bundle);
+                ft.replace(R.id.frame_container, flashCardsFragment);
                 ft.commit();
 
             }
@@ -140,54 +127,6 @@ public class CategoriesFragment extends Fragment {
     }
 
 
-    // Title AsyncTask
-    class GetWordsInBackground extends AsyncTask<Void, Void, Void> {
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            mProgressDialog = new ProgressDialog(getActivity());
-            mProgressDialog.setCancelable(false);
-            mProgressDialog.setTitle("Word List by categories");
-            mProgressDialog.setMessage("Loading...");
-            mProgressDialog.setIndeterminate(false);
-            mProgressDialog.show();
-            Log.d("data", "started");
-
-        }
-
-        @Override
-        protected Void doInBackground(Void... params) {
-            try {
-                // Connect to the web site
-
-
-                BufferedReader reader = new BufferedReader(new InputStreamReader(getActivity().getAssets().open("dictionary.json"), "UTF-8"));
-
-                Gson gson = new GsonBuilder().create();
-
-                wordByCategories = gson.fromJson(reader, new TypeToken<ArrayList<Categories>>() {
-                }.getType());
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            // Set title into TextView
-
-
-
-            // on first time display view for first nav item
-
-
-
-        }
-    }
 
 
 }

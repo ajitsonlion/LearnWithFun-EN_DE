@@ -1,6 +1,10 @@
 package info.androidhive.slidingmenu;
 
+import info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView;
+import info.androidhive.slidingmenu.WordSearch.SearchInDictionary;
+import info.androidhive.slidingmenu.adapter.CardAdapter;
 import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
+import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
 import info.androidhive.slidingmenu.model.WordModel.Categories;
 import info.androidhive.slidingmenu.model.WordModel.FlashCard;
@@ -9,10 +13,12 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.AsyncTask;
@@ -20,11 +26,14 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -35,12 +44,18 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
-    ProgressDialog mProgressDialog;
-	// nav drawer title
+ 	// nav drawer title
 	private CharSequence mDrawerTitle;
     private int categoryID;
 
-	// used to store app title
+    ProgressDialog mProgressDialog;
+
+    SearchInDictionary searchInDictionary;
+    SingleScrollListView flipView;
+    private ClearableAutoCompleteTextView searchBox;
+
+
+    // used to store app title
 	private CharSequence mTitle;
     public static ArrayList<Categories> wordByCategories;
 	// slide menu items
@@ -54,6 +69,11 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+
+
+
+
+     new GetWordsInBackground().execute();
 
 		setContentView(R.layout.activity_main);
  		mTitle = mDrawerTitle = getTitle();
@@ -117,11 +137,80 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
 				invalidateOptionsMenu();
 			}
 		};
-		mDrawerLayout.setDrawerListener(mDrawerToggle);
-        if (savedInstanceState==null){
-            displayView(0);
+
+        View v = getLayoutInflater().inflate(R.layout.actionbar_search, null);
+        // inflate the view that we created before
+        // the view that contains the search "magnifier" icon
+        final ImageView searchIcon = (ImageView) v.findViewById(R.id.search_icon);
+        ActionBar actionBar = getActionBar(); // you can use ABS or the non-bc ActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_USE_LOGO | ActionBar.DISPLAY_SHOW_HOME
+                    | ActionBar.DISPLAY_HOME_AS_UP); // what's mainly important here is DISPLAY_SHOW_CUSTOM. the rest is optional
         }
+         searchBox = (ClearableAutoCompleteTextView) v.findViewById(R.id.search_box);
+         // start with the text view hidden in the action bar
+        searchBox.setVisibility(View.INVISIBLE);
+        searchIcon.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                toggleSearch(false);
+            }
+        });
+
+        searchBox.setOnClearListener(new ClearableAutoCompleteTextView.OnClearListener() {
+
+            @Override
+            public void onClear() {
+                toggleSearch(true);
+            }
+        });
+
+        searchBox.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // handle clicks on search resaults here
+            }
+
+        });
+
+        actionBar.setCustomView(v);
+
+
+        
+        
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
+
 	}
+
+
+
+    // to show search icon - reset = true
+// to show search box - reset = false
+    protected void toggleSearch(boolean reset) {
+        ClearableAutoCompleteTextView searchBox = (ClearableAutoCompleteTextView) findViewById(R.id.search_box);
+        ImageView searchIcon = (ImageView) findViewById(R.id.search_icon);
+        if (reset) {
+            // hide search box and show search icon
+            searchBox.setText("");
+            searchBox.setVisibility(View.GONE);
+            searchIcon.setVisibility(View.VISIBLE);
+            // hide the keyboard
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(searchBox.getWindowToken(), 0);
+        } else {
+            // hide search icon and show search box
+            searchIcon.setVisibility(View.GONE);
+            searchBox.setVisibility(View.VISIBLE);
+            searchBox.requestFocus();
+            // show the keyboard
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(searchBox, InputMethodManager.SHOW_IMPLICIT);
+        }
+
+    }
+    
 
     @Override
     public void onNewsItemPicked(int position) {
@@ -248,5 +337,61 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
 	}
 
 
+    // Title AsyncTask
+    class GetWordsInBackground extends AsyncTask<Void, Void, Void> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mProgressDialog = new ProgressDialog(MainActivity.this );
+            mProgressDialog.setCancelable(false);
+            mProgressDialog.setTitle("Word List by categories");
+            mProgressDialog.setMessage("Loading...");
+            mProgressDialog.setIndeterminate(false);
+            mProgressDialog.show();
+            Log.d("data", "started");
+
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                // Connect to the web site
+
+
+                BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("dictionary.json"), "UTF-8"));
+
+                Gson gson = new GsonBuilder().create();
+
+                wordByCategories = gson.fromJson(reader, new TypeToken<ArrayList<Categories>>() {
+                }.getType());
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            // Set title into TextView
+
+            ArrayList<FlashCard> wordsDatabase=new ArrayList<FlashCard>();
+
+            for (Categories c:wordByCategories){
+                wordsDatabase.addAll(c.getFlashCards());
+            }
+
+            searchInDictionary = new SearchInDictionary(getApplicationContext(), wordsDatabase);
+
+            searchBox.setAdapter(searchInDictionary);
+             mProgressDialog.dismiss();
+            if (savedInstanceState==null){
+                displayView(0);
+            }
+
+        }
+    }
 
 }

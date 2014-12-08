@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LearnWithFun-EN_DE.iml" filepath="$PROJECT_DIR$/LearnWithFun-EN_DE.iml" />
       <module fileurl="file://$PROJECT_DIR$/VocabWithFun.iml" filepath="$PROJECT_DIR$/VocabWithFun.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
