@@ -40,7 +40,7 @@ public class CategoriesItem  {
     public CategoriesItem(String english, int icon, String german){
         this.english = english;
         this.icon = icon;
-         this.german = german;
+        this.german = german;
     }
 
 

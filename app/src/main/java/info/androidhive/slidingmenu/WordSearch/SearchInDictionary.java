@@ -76,7 +76,7 @@ public class SearchInDictionary extends ArrayAdapter<FlashCard> implements Filte
                         //In this loop, you'll filter through originalData and compare each item to charSequence.
                         //If you find a match, add it to your new ArrayList
                         //I'm not sure how you're going to do comparison, so you'll need to fill out this conditional
-                        if(card.getGermanFaceOfFlashCard().getWord().toLowerCase().contains(charSequence.toString().toLowerCase()) ||card.getEnglishFaceOfFlashCard().getWord().toLowerCase().contains(charSequence.toString().toLowerCase()))
+                        if(card.getGer().getWord().toLowerCase().contains(charSequence.toString().toLowerCase()) ||card.getEng().getWord().toLowerCase().contains(charSequence.toString().toLowerCase()))
                         {
                             filteredCards.add(card);
                         }
@@ -112,9 +112,9 @@ public class SearchInDictionary extends ArrayAdapter<FlashCard> implements Filte
         TextView german=(TextView)rootView.findViewById(R.id.search_item_venue_name);
         TextView english=(TextView)rootView.findViewById(R.id.search_item_venue_address);
 
-        german.setText(filteredCards.get(position).getGermanFaceOfFlashCard().getWord());
+        german.setText(filteredCards.get(position).getGer().getWord());
 
-        english.setText(filteredCards.get(position).getEnglishFaceOfFlashCard().getWord());
+        english.setText(filteredCards.get(position).getEng().getWord());
 
         return  rootView;
     }

@@ -2,7 +2,6 @@ package info.androidhive.slidingmenu;
 
 import info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView;
 import info.androidhive.slidingmenu.WordSearch.SearchInDictionary;
-import info.androidhive.slidingmenu.adapter.CardAdapter;
 import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
 import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
@@ -10,6 +9,7 @@ import info.androidhive.slidingmenu.model.WordModel.Categories;
 import info.androidhive.slidingmenu.model.WordModel.FlashCard;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -26,21 +26,20 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.pixplicity.easyprefs.library.Prefs;
 
-public class MainActivity extends Activity implements CategoriesFragment.OnNewsItemSelectedListener{
+public class MainActivity extends Activity     {
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
@@ -53,11 +52,11 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
     SearchInDictionary searchInDictionary;
     SingleScrollListView flipView;
     private ClearableAutoCompleteTextView searchBox;
-
+    ArrayList<FlashCard>  wordsDatabase;
 
     // used to store app title
 	private CharSequence mTitle;
-    public static ArrayList<Categories> wordByCategories;
+    public static  ArrayList<Categories> wordByCategories;
 	// slide menu items
 	private String[] navMenuTitles;
 	private TypedArray navMenuIcons;
@@ -69,11 +68,14 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+        wordByCategories=new ArrayList<Categories>();
+
+        new GetWordsInBackground().execute();
 
 
 
 
-     new GetWordsInBackground().execute();
+
 
 		setContentView(R.layout.activity_main);
  		mTitle = mDrawerTitle = getTitle();
@@ -210,14 +212,7 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
         }
 
     }
-    
 
-    @Override
-    public void onNewsItemPicked(int position) {
-
- categoryID=position;
-
-    }
 
     /**
 	 * Slide menu item click listener
@@ -272,6 +267,7 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
+
 			fragment = new CategoriesFragment();
 			break;
 		case 1:
@@ -351,21 +347,42 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
             mProgressDialog.setIndeterminate(false);
             mProgressDialog.show();
             Log.d("data", "started");
-
         }
 
         @Override
         protected Void doInBackground(Void... params) {
             try {
+
                 // Connect to the web site
 
 
-                BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("dictionary.json"), "UTF-8"));
+                        wordByCategories= (ArrayList<Categories>) Categories.listAll(Categories.class);
 
-                Gson gson = new GsonBuilder().create();
+                        if (wordByCategories.isEmpty()){
 
-                wordByCategories = gson.fromJson(reader, new TypeToken<ArrayList<Categories>>() {
-                }.getType());
+                            BufferedReader reader = null;
+                            try {
+                                reader = new BufferedReader(new InputStreamReader(getAssets().open("dictionary.json"), "UTF-8"));
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+
+                            Gson gson = new GsonBuilder().create();
+
+                            wordByCategories = gson.fromJson(reader, new TypeToken<ArrayList<Categories>>() {
+                            }.getType());
+
+                                    for (Categories c : wordByCategories) {
+                                        c.save();
+                                        for (FlashCard card:c.getCards()){
+                                            card.setCategoryID(c.getId());
+                                            card.save();
+                                        }
+                                    }
+                        }
+
+                wordsDatabase= (ArrayList<FlashCard>) FlashCard.listAll(FlashCard.class);
+
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -373,15 +390,11 @@ public class MainActivity extends Activity implements CategoriesFragment.OnNewsI
             return null;
         }
 
+
         @Override
         protected void onPostExecute(Void result) {
             // Set title into TextView
 
-            ArrayList<FlashCard> wordsDatabase=new ArrayList<FlashCard>();
-
-            for (Categories c:wordByCategories){
-                wordsDatabase.addAll(c.getFlashCards());
-            }
 
             searchInDictionary = new SearchInDictionary(getApplicationContext(), wordsDatabase);
 

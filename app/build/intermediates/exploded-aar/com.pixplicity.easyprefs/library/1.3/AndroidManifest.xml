@@ -1,0 +1,8 @@
+<!-- From: file:/home/dylan/Android-Studio-Projects/EasyPrefs/library/src/main/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.3" package="com.pixplicity.easyprefs.library">
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19"/>
+
+    <application android:allowBackup="true">
+
+    </application>
+
+</manifest>

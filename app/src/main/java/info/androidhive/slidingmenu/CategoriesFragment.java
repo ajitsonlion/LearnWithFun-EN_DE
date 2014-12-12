@@ -3,39 +3,20 @@ package info.androidhive.slidingmenu;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.content.res.TypedArray;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import info.androidhive.slidingmenu.R;
-import info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView;
-import info.androidhive.slidingmenu.WordSearch.SearchInDictionary;
-import info.androidhive.slidingmenu.adapter.CardAdapter;
 import info.androidhive.slidingmenu.adapter.CategoriesAdaptor;
-import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.CategoriesItem;
-import info.androidhive.slidingmenu.model.NavDrawerItem;
 import info.androidhive.slidingmenu.model.WordModel.Categories;
-import info.androidhive.slidingmenu.model.WordModel.FlashCard;
 
 
 public class CategoriesFragment extends Fragment {
@@ -77,9 +58,9 @@ public class CategoriesFragment extends Fragment {
 
         categoriesItems = new ArrayList<CategoriesItem>();
 
-       for (int i=0;i<categoriesInEnglish.length;i++){
+       for (Categories c:MainActivity.wordByCategories){
 
-           categoriesItems.add(new CategoriesItem(categoriesInEnglish[i],iconForCategory.getResourceId(i, -1),categoriesInGerman[i]));
+           categoriesItems.add(new CategoriesItem(c.getCatEng(),iconForCategory.getResourceId(1, -1),c.getCatGer()));
 
        }
 
@@ -94,6 +75,7 @@ public class CategoriesFragment extends Fragment {
 
                 Bundle bundle=new Bundle();
                 bundle.putInt("categoryID",position);
+
 
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
@@ -122,9 +104,7 @@ public class CategoriesFragment extends Fragment {
         super.onDetach();
      }
 
-    public interface OnNewsItemSelectedListener{
-        public void onNewsItemPicked(int position);
-    }
+
 
 
 

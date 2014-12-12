@@ -1,6 +1,7 @@
-C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\classes\debug
-C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-8983e6e567b6edd74e462d5010829aae3b2038bb.jar
-C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\classes-204f9815ea06c109685cbdcc09d5659902c881ef.jar
-C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\gson-2.2.4-9bbf6e1042f78e834bb38f801913559ce8c7b923.jar
-C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-258e2bca616cbdb09d09c1509aae856038ba0b91.jar
-C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\classes-a3a8247e927653dcaf9a6768eb18ff9648a29c96.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/classes/debug
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-0d982ffa683eba8c3ae90641fcaa7a41d9ed4b6a.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-b4fe2f2e84dab52997241a2d077267d4ad24ead8.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-dae31968cc1b65c8659c9a9fbeb66bd4f39c65d2.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/gson-2.2.4-08b7eb49244ec2bccb63ebb71c482f4e4162178b.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-c069eefc9a6099952d1159a48ae03ac18927c663.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-100bdf00c42a3d3c09f6be2a45a9f6d7e5f077c5.jar

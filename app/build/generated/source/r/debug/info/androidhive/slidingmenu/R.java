@@ -20,6 +20,135 @@ public final class R {
         public static final int nav_drawer_items=0x7f050004;
     }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int barColor=0x7f010003;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int barLength=0x7f01000a;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int barWidth=0x7f010009;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circleColor=0x7f010007;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contourColor=0x7f01000c;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contourSize=0x7f01000d;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int delayMillis=0x7f01000b;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int radius=0x7f010008;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rimColor=0x7f010004;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rimWidth=0x7f010005;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int spinSpeed=0x7f010006;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int text=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColor=0x7f010001;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textSize=0x7f010002;
     }
     public static final class color {
         public static final int counter_text_bg=0x7f060000;
@@ -309,67 +438,75 @@ public final class R {
         public static final int ic_adverb_time=0x7f020010;
         public static final int ic_alphabett=0x7f020011;
         public static final int ic_body_parts=0x7f020012;
-        public static final int ic_colors=0x7f020013;
-        public static final int ic_common_phrases=0x7f020014;
-        public static final int ic_communities=0x7f020015;
-        public static final int ic_day_month_season=0x7f020016;
-        public static final int ic_drawer=0x7f020017;
-        public static final int ic_family=0x7f020018;
-        public static final int ic_flip=0x7f020019;
-        public static final int ic_food_meal=0x7f02001a;
-        public static final int ic_fruits_and_vegetables=0x7f02001b;
-        public static final int ic_home=0x7f02001c;
-        public static final int ic_launcher=0x7f02001d;
-        public static final int ic_numbers=0x7f02001e;
-        public static final int ic_pages=0x7f02001f;
-        public static final int ic_people=0x7f020020;
-        public static final int ic_photos=0x7f020021;
-        public static final int ic_places_materials=0x7f020022;
-        public static final int ic_posessive_pronoun=0x7f020023;
-        public static final int ic_pronoun=0x7f020024;
-        public static final int ic_search=0x7f020025;
-        public static final int ic_speak=0x7f020026;
-        public static final int ic_time_weather_direction=0x7f020027;
-        public static final int ic_whats_hot=0x7f020028;
-        public static final int list_item_bg_normal=0x7f020029;
-        public static final int list_item_bg_pressed=0x7f02002a;
-        public static final int list_selector=0x7f02002b;
-        public static final int progress_bar=0x7f02002c;
-        public static final int rounded_corner=0x7f02002d;
+        public static final int ic_bookmarked_no=0x7f020013;
+        public static final int ic_bookmarked_yes=0x7f020014;
+        public static final int ic_colors=0x7f020015;
+        public static final int ic_common_phrases=0x7f020016;
+        public static final int ic_communities=0x7f020017;
+        public static final int ic_day_month_season=0x7f020018;
+        public static final int ic_drawer=0x7f020019;
+        public static final int ic_family=0x7f02001a;
+        public static final int ic_flip=0x7f02001b;
+        public static final int ic_flip_to_back=0x7f02001c;
+        public static final int ic_flip_to_front=0x7f02001d;
+        public static final int ic_food_meal=0x7f02001e;
+        public static final int ic_fruits_and_vegetables=0x7f02001f;
+        public static final int ic_home=0x7f020020;
+        public static final int ic_launcher=0x7f020021;
+        public static final int ic_numbers=0x7f020022;
+        public static final int ic_pages=0x7f020023;
+        public static final int ic_people=0x7f020024;
+        public static final int ic_photos=0x7f020025;
+        public static final int ic_places_materials=0x7f020026;
+        public static final int ic_posessive_pronoun=0x7f020027;
+        public static final int ic_pronoun=0x7f020028;
+        public static final int ic_search=0x7f020029;
+        public static final int ic_speak=0x7f02002a;
+        public static final int ic_time_weather_direction=0x7f02002b;
+        public static final int ic_whats_hot=0x7f02002c;
+        public static final int list_item_bg_normal=0x7f02002d;
+        public static final int list_item_bg_pressed=0x7f02002e;
+        public static final int list_selector=0x7f02002f;
+        public static final int progress_bar=0x7f020030;
+        public static final int rounded_corner=0x7f020031;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b001f;
-        public static final int counter=0x7f0b0012;
+        public static final int action_settings=0x7f0b0023;
+        public static final int counter=0x7f0b0014;
         public static final int drawer_layout=0x7f0b0002;
-        public static final int englishWord=0x7f0b000b;
-        public static final int flip_icon_back=0x7f0b000c;
-        public static final int flip_icon_front=0x7f0b0009;
-        public static final int flip_view=0x7f0b0015;
+        public static final int englishWord=0x7f0b000e;
+        public static final int flip_icon_back=0x7f0b000d;
+        public static final int flip_icon_front=0x7f0b000a;
+        public static final int flip_view=0x7f0b0019;
         public static final int frame_container=0x7f0b0003;
-        public static final int germanWord=0x7f0b0007;
-        public static final int gridView1=0x7f0b0013;
-        public static final int icon=0x7f0b0010;
-        public static final int icon_speak=0x7f0b0008;
-        public static final int imageView=0x7f0b0019;
-        public static final int imageView2=0x7f0b001c;
-        public static final int imageView_categories=0x7f0b000d;
+        public static final int germanWord=0x7f0b0008;
+        public static final int gridView1=0x7f0b0015;
+        public static final int icon=0x7f0b0012;
+        public static final int icon_speak=0x7f0b0009;
+        public static final int imageView=0x7f0b001d;
+        public static final int imageView2=0x7f0b0020;
+        public static final int imageViewBookmark=0x7f0b000b;
+        public static final int imageView_categories=0x7f0b000f;
         public static final int list_slidermenu=0x7f0b0004;
-        public static final int main_activity_card_back=0x7f0b000a;
+        public static final int main_activity_card_back=0x7f0b000c;
         public static final int main_activity_card_face=0x7f0b0006;
         public static final int main_activity_root=0x7f0b0005;
-        public static final int scrollView=0x7f0b0018;
+        public static final int pw_spinner=0x7f0b0017;
+        public static final int scrollView=0x7f0b001c;
         public static final int search_box=0x7f0b0000;
         public static final int search_icon=0x7f0b0001;
-        public static final int search_item_venue_address=0x7f0b0017;
-        public static final int search_item_venue_name=0x7f0b0016;
-        public static final int textView=0x7f0b001a;
-        public static final int textView2=0x7f0b001b;
-        public static final int textView3=0x7f0b001d;
-        public static final int textView4=0x7f0b001e;
-        public static final int textView_english_categories=0x7f0b000e;
-        public static final int textView_german_categories=0x7f0b000f;
-        public static final int title=0x7f0b0011;
-        public static final int txtLabel=0x7f0b0014;
+        public static final int search_item_venue_address=0x7f0b001b;
+        public static final int search_item_venue_name=0x7f0b001a;
+        public static final int textView=0x7f0b001e;
+        public static final int textView2=0x7f0b001f;
+        public static final int textView3=0x7f0b0021;
+        public static final int textView4=0x7f0b0022;
+        public static final int textView5=0x7f0b0018;
+        public static final int textViewArticle=0x7f0b0007;
+        public static final int textView_english_categories=0x7f0b0010;
+        public static final int textView_german_categories=0x7f0b0011;
+        public static final int title=0x7f0b0013;
+        public static final int txtLabel=0x7f0b0016;
     }
     public static final class layout {
         public static final int actionbar_search=0x7f030000;
@@ -409,4 +546,261 @@ public final class R {
         public static final int AppTheme=0x7f090000;
         public static final int ProgressBarStyle=0x7f090001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ProgressWheel.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ProgressWheel_barColor info.androidhive.slidingmenu:barColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_barLength info.androidhive.slidingmenu:barLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_barWidth info.androidhive.slidingmenu:barWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_circleColor info.androidhive.slidingmenu:circleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_contourColor info.androidhive.slidingmenu:contourColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_contourSize info.androidhive.slidingmenu:contourSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_delayMillis info.androidhive.slidingmenu:delayMillis}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_radius info.androidhive.slidingmenu:radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_rimColor info.androidhive.slidingmenu:rimColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_rimWidth info.androidhive.slidingmenu:rimWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_spinSpeed info.androidhive.slidingmenu:spinSpeed}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_text info.androidhive.slidingmenu:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_textColor info.androidhive.slidingmenu:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressWheel_textSize info.androidhive.slidingmenu:textSize}</code></td><td></td></tr>
+           </table>
+           @see #ProgressWheel_barColor
+           @see #ProgressWheel_barLength
+           @see #ProgressWheel_barWidth
+           @see #ProgressWheel_circleColor
+           @see #ProgressWheel_contourColor
+           @see #ProgressWheel_contourSize
+           @see #ProgressWheel_delayMillis
+           @see #ProgressWheel_radius
+           @see #ProgressWheel_rimColor
+           @see #ProgressWheel_rimWidth
+           @see #ProgressWheel_spinSpeed
+           @see #ProgressWheel_text
+           @see #ProgressWheel_textColor
+           @see #ProgressWheel_textSize
+         */
+        public static final int[] ProgressWheel = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#barColor}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:barColor
+        */
+        public static final int ProgressWheel_barColor = 3;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#barLength}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:barLength
+        */
+        public static final int ProgressWheel_barLength = 10;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#barWidth}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:barWidth
+        */
+        public static final int ProgressWheel_barWidth = 9;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#circleColor}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:circleColor
+        */
+        public static final int ProgressWheel_circleColor = 7;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#contourColor}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:contourColor
+        */
+        public static final int ProgressWheel_contourColor = 12;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#contourSize}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:contourSize
+        */
+        public static final int ProgressWheel_contourSize = 13;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#delayMillis}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:delayMillis
+        */
+        public static final int ProgressWheel_delayMillis = 11;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#radius}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:radius
+        */
+        public static final int ProgressWheel_radius = 8;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#rimColor}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:rimColor
+        */
+        public static final int ProgressWheel_rimColor = 4;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#rimWidth}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:rimWidth
+        */
+        public static final int ProgressWheel_rimWidth = 5;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#spinSpeed}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:spinSpeed
+        */
+        public static final int ProgressWheel_spinSpeed = 6;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#text}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:text
+        */
+        public static final int ProgressWheel_text = 0;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#textColor}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:textColor
+        */
+        public static final int ProgressWheel_textColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.slidingmenu.R.attr#textSize}
+          attribute's value can be found in the {@link #ProgressWheel} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.slidingmenu:textSize
+        */
+        public static final int ProgressWheel_textSize = 2;
+    };
 }

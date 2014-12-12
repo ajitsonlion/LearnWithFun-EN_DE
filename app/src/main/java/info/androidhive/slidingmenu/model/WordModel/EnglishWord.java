@@ -1,18 +1,20 @@
 package info.androidhive.slidingmenu.model.WordModel;
 
+import com.orm.SugarRecord;
+
+
 /**
  * Created by ajit on 05.12.14.
  */
-public class EnglishWord {
+public class EnglishWord extends SugarRecord<Categories> {
     private String word;
-    private short englishWordID;
 
-    public String getGender() {
-        return gender;
+    public String getGen() {
+        return gen;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGen(String gen) {
+        this.gen = gen;
     }
 
     public String getWord() {
@@ -22,15 +24,6 @@ public class EnglishWord {
     public void setWord(String word) {
         this.word = word;
     }
-
-    public short getEnglishWordID() {
-        return englishWordID;
-    }
-
-    public void setEnglishWordID(short englishWordID) {
-        this.englishWordID = englishWordID;
-    }
-
-    private String gender;
+    private String gen;
 
 }

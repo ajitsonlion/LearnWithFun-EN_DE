@@ -1,35 +1,21 @@
 package info.androidhive.slidingmenu;
 
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
+import com.orm.query.Condition;
+import com.orm.query.Select;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
 import info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView;
 import info.androidhive.slidingmenu.WordSearch.SearchInDictionary;
 import info.androidhive.slidingmenu.adapter.CardAdapter;
+import info.androidhive.slidingmenu.cardUI.ProgressWheel;
 import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.WordModel.Categories;
 import info.androidhive.slidingmenu.model.WordModel.FlashCard;
@@ -52,12 +38,20 @@ public class FlashCardsFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
+        ProgressWheel pw = (ProgressWheel)rootView.findViewById(R.id.pw_spinner);
+        pw.setProgress(180);
+
         flipView = (SingleScrollListView) rootView.findViewById(R.id.flip_view);
         ArrayList<FlashCard> flashCards=new ArrayList<FlashCard>();
 
         Bundle bundle=this.getArguments();
+        int temp=bundle.getInt("categoryID");
+        Categories categories=MainActivity.wordByCategories.get(temp);
 
-       flashCards.addAll(MainActivity.wordByCategories.get(bundle.getInt("categoryID")).getFlashCards());
+        flashCards= categories.getCardsForCategory();
+
+      // flashCards.addAll(MainActivity.wordByCategories.get(bundle.getInt("categoryID")).getCards());
+
 
         CardAdapter cardAdapter=new CardAdapter(getActivity(),flashCards);
         flipView.setAdapter(cardAdapter);
@@ -67,8 +61,5 @@ public class FlashCardsFragment extends Fragment {
 
         return rootView;
     }
-
-
-
 
 }

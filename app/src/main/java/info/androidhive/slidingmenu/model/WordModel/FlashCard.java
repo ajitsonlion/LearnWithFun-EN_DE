@@ -1,37 +1,50 @@
 package info.androidhive.slidingmenu.model.WordModel;
 
+import com.orm.SugarRecord;
+
 /**
  * Created by ajit on 05.12.14.
  */
-public class FlashCard {
+public class FlashCard extends SugarRecord<FlashCard> {
 
-    private short flashCardID;
-
-    public short getFlashCardID() {
-        return flashCardID;
+    public GermanWord getGer() {
+        return ger;
     }
 
-    public void setFlashCardID(short flashCardID) {
-        this.flashCardID = flashCardID;
+    public void setGer(GermanWord ger) {
+        this.ger = ger;
     }
 
-    public GermanWord getGermanFaceOfFlashCard() {
-        return germanFaceOfFlashCard;
+    public EnglishWord getEng() {
+        return eng;
     }
 
-    public void setGermanFaceOfFlashCard(GermanWord germanFaceOfFlashCard) {
-        this.germanFaceOfFlashCard = germanFaceOfFlashCard;
+    public void setEng(EnglishWord eng) {
+        this.eng = eng;
     }
 
-    public EnglishWord getEnglishFaceOfFlashCard() {
-        return englishFaceOfFlashCard;
+    private GermanWord ger;
+    private EnglishWord eng;
+
+    public long getCategoryID() {
+        return categoryID;
     }
 
-    public void setEnglishFaceOfFlashCard(EnglishWord englishFaceOfFlashCard) {
-        this.englishFaceOfFlashCard = englishFaceOfFlashCard;
+    public void setCategoryID(long categoryID) {
+        this.categoryID = categoryID;
     }
 
-    private GermanWord germanFaceOfFlashCard;
-    private EnglishWord englishFaceOfFlashCard;
+    private long categoryID;
+
+    public boolean isBookMarked() {
+        return isBookMarked;
+    }
+
+    public void setBookMarked(boolean bookMarked) {
+        this.isBookMarked = bookMarked;
+    }
+
+    private boolean isBookMarked;
+
 
 }

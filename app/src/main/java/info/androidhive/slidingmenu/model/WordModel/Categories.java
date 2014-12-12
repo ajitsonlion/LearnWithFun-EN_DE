@@ -1,49 +1,52 @@
 package info.androidhive.slidingmenu.model.WordModel;
 
 import com.orm.SugarRecord;
+import com.orm.dsl.Ignore;
+import com.orm.query.Condition;
+import com.orm.query.Select;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by ajit on 05.12.14.
  */
 public class Categories extends SugarRecord<Categories> {
 
-    public short getCategoryID() {
-        return categoryID;
+    public String getCatEng() {
+        return catEng;
     }
 
-    public void setCategoryID(short categoryID) {
-        this.categoryID = categoryID;
+    public void setCatEng(String catEng) {
+        this.catEng = catEng;
     }
 
-    public String getCategoryNameInEnglish() {
-        return categoryNameInEnglish;
+    public ArrayList<FlashCard> getCards() {
+        return cards;
     }
 
-    public void setCategoryNameInEnglish(String categoryNameInEnglish) {
-        this.categoryNameInEnglish = categoryNameInEnglish;
+    public ArrayList<FlashCard> getCardsForCategory() {
+
+
+        return (ArrayList<FlashCard>) Select.from(FlashCard.class).where(Condition.prop("category_iD").eq(this.getId())).list();
     }
 
-    public ArrayList<FlashCard> getFlashCards() {
-        return flashCards;
+    public void setCards(ArrayList<FlashCard> cards) {
+        this.cards = cards;
     }
 
-    public void setFlashCards(ArrayList<FlashCard> flashCards) {
-        this.flashCards = flashCards;
+    private String catEng;
+
+    public String getCatGer() {
+        return catGer;
     }
 
-    private short categoryID;
-    private String categoryNameInEnglish;
-
-    public String getCategoryNameInGerman() {
-        return categoryNameInGerman;
+    public void setCatGer(String catGer) {
+        this.catGer = catGer;
     }
 
-    public void setCategoryNameInGerman(String categoryNameInGerman) {
-        this.categoryNameInGerman = categoryNameInGerman;
-    }
-
-    private String categoryNameInGerman;
-    private ArrayList<FlashCard> flashCards;
+    private String catGer;
+    @Ignore
+    private ArrayList<FlashCard> cards;
 }
