@@ -1,7 +1,7 @@
 package info.androidhive.slidingmenu;
 
-import info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView;
-import info.androidhive.slidingmenu.WordSearch.SearchInDictionary;
+import info.androidhive.slidingmenu.Search.ClearableAutoCompleteTextView;
+import info.androidhive.slidingmenu.Search.SearchInDictionary;
 import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
 import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
@@ -37,7 +37,6 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.pixplicity.easyprefs.library.Prefs;
 
 public class MainActivity extends Activity     {
 	private DrawerLayout mDrawerLayout;
@@ -71,11 +70,6 @@ public class MainActivity extends Activity     {
         wordByCategories=new ArrayList<Categories>();
 
         new GetWordsInBackground().execute();
-
-
-
-
-
 
 		setContentView(R.layout.activity_main);
  		mTitle = mDrawerTitle = getTitle();
@@ -271,7 +265,7 @@ public class MainActivity extends Activity     {
 			fragment = new CategoriesFragment();
 			break;
 		case 1:
-			fragment = new FindPeopleFragment();
+			fragment = new GamesFragment();
 
 			break;
 		case 2:
@@ -342,10 +336,11 @@ public class MainActivity extends Activity     {
             super.onPreExecute();
             mProgressDialog = new ProgressDialog(MainActivity.this );
             mProgressDialog.setCancelable(false);
-            mProgressDialog.setTitle("Word List by categories");
+            mProgressDialog.setTitle("Word List ");
             mProgressDialog.setMessage("Loading...");
             mProgressDialog.setIndeterminate(false);
             mProgressDialog.show();
+
             Log.d("data", "started");
         }
 
@@ -356,9 +351,9 @@ public class MainActivity extends Activity     {
                 // Connect to the web site
 
 
-                        wordByCategories= (ArrayList<Categories>) Categories.listAll(Categories.class);
+                //    wordByCategories= (ArrayList<Categories>) Categories.listAll(Categories.class);
 
-                        if (wordByCategories.isEmpty()){
+                //     if (wordByCategories.isEmpty()){
 
                             BufferedReader reader = null;
                             try {
@@ -372,16 +367,25 @@ public class MainActivity extends Activity     {
                             wordByCategories = gson.fromJson(reader, new TypeToken<ArrayList<Categories>>() {
                             }.getType());
 
-                                    for (Categories c : wordByCategories) {
-                                        c.save();
-                                        for (FlashCard card:c.getCards()){
-                                            card.setCategoryID(c.getId());
-                                            card.save();
-                                        }
-                                    }
-                        }
+                //     for (Categories c : wordByCategories) {
+                //          c.save();
+                //           for (FlashCard card:c.getCards()){
+                //                 card.setCategoryID(c.getId());
+                //                 card.getEng().save();
+                //                  card.getGer().save();
+                //                   card.save();
+                //              }
+                //          }
+                //    }
 
-                wordsDatabase= (ArrayList<FlashCard>) FlashCard.listAll(FlashCard.class);
+                for(Categories c:wordByCategories){
+
+                    wordsDatabase.addAll(c.getCards());
+                }
+
+
+
+
 
 
             } catch (Exception e) {

@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_flip_to_back"
+            android:src="@drawable/ic_flip_to_front"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"

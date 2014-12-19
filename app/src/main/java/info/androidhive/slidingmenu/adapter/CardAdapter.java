@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.pixplicity.easyprefs.library.Prefs;
+
 import java.util.ArrayList;
 
  import info.androidhive.slidingmenu.ListeningHearing.SpeakWord;
@@ -36,7 +38,7 @@ public class CardAdapter extends ArrayAdapter<FlashCard> {
         this.context = context;
         this.flashCards = flashCards;
         speakWord = new SpeakWord(context);
-
+        Prefs.initPrefs(context);
     }
     @Override
     public int getCount() {
@@ -67,13 +69,13 @@ public class CardAdapter extends ArrayAdapter<FlashCard> {
         ImageView iconSpeak=(ImageView)rowView.findViewById(R.id.icon_speak);
         final FlashCard flashCard= flashCards.get(position);
 
-       if(flashCard.isBookMarked()){
-           bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_yes));
+       final boolean bookmark= Prefs.getBoolean("card_"+flashCard.getCrdID(),false);
 
+       if(bookmark){
+           bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_yes));
        }
         else {
            bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_no));
-
        }
 
         String germanWord=flashCard.getGer().getWord();
@@ -109,15 +111,14 @@ public class CardAdapter extends ArrayAdapter<FlashCard> {
             }
 
             private void toggleBookmark() {
-                if(flashCard.isBookMarked()){
-                    flashCard.setBookMarked(false);
-                    flashCard.save();
+                if(bookmark){
+
+                    Prefs.putBoolean("card_"+flashCard.getCrdID(),false);
                     bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_no));
                     Toast.makeText(context,"Removed to Bookmarked "+flashCard.getGer().getWord(),Toast.LENGTH_SHORT).show();
                  }
                 else {
-                    flashCard.setBookMarked(true);
-                    flashCard.save();
+                     Prefs.putBoolean("card_" + flashCard.getCrdID(), true);
                     bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_yes));
                     Toast.makeText(context,"Added from Bookmarked "+flashCard.getGer().getWord(),Toast.LENGTH_SHORT).show();
                 }

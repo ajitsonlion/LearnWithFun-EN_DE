@@ -7,13 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.orm.query.Condition;
-import com.orm.query.Select;
-
 import java.util.ArrayList;
 
-import info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView;
-import info.androidhive.slidingmenu.WordSearch.SearchInDictionary;
+import info.androidhive.slidingmenu.Search.ClearableAutoCompleteTextView;
+import info.androidhive.slidingmenu.Search.SearchInDictionary;
 import info.androidhive.slidingmenu.adapter.CardAdapter;
 import info.androidhive.slidingmenu.cardUI.ProgressWheel;
 import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
@@ -36,7 +33,7 @@ public class FlashCardsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_cards, container, false);
 
         ProgressWheel pw = (ProgressWheel)rootView.findViewById(R.id.pw_spinner);
         pw.setProgress(180);
@@ -48,10 +45,7 @@ public class FlashCardsFragment extends Fragment {
         int temp=bundle.getInt("categoryID");
         Categories categories=MainActivity.wordByCategories.get(temp);
 
-        flashCards= categories.getCardsForCategory();
-
-      // flashCards.addAll(MainActivity.wordByCategories.get(bundle.getInt("categoryID")).getCards());
-
+        flashCards= categories.getCards();
 
         CardAdapter cardAdapter=new CardAdapter(getActivity(),flashCards);
         flipView.setAdapter(cardAdapter);

@@ -1,6 +1,7 @@
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/classes/debug
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-0d982ffa683eba8c3ae90641fcaa7a41d9ed4b6a.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-b4fe2f2e84dab52997241a2d077267d4ad24ead8.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/libGoogleAnalytics-0a23a38960d58ce0e5cbba14870294bb0fe27d3c.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-dae31968cc1b65c8659c9a9fbeb66bd4f39c65d2.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/gson-2.2.4-08b7eb49244ec2bccb63ebb71c482f4e4162178b.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-c069eefc9a6099952d1159a48ae03ac18927c663.jar

@@ -1,11 +1,13 @@
 package info.androidhive.slidingmenu.model.WordModel;
 
 import com.orm.SugarRecord;
+import com.pixplicity.easyprefs.library.Prefs;
 
 /**
  * Created by ajit on 05.12.14.
  */
-public class FlashCard extends SugarRecord<FlashCard> {
+public class FlashCard     {
+
 
     public GermanWord getGer() {
         return ger;
@@ -26,25 +28,25 @@ public class FlashCard extends SugarRecord<FlashCard> {
     private GermanWord ger;
     private EnglishWord eng;
 
-    public long getCategoryID() {
-        return categoryID;
+    public long getCrdID() {
+        return crdID;
     }
 
-    public void setCategoryID(long categoryID) {
-        this.categoryID = categoryID;
+    public void setCrdID(long crdID) {
+        this.crdID = crdID;
     }
 
-    private long categoryID;
+    private long crdID;
 
-    public boolean isBookMarked() {
-        return isBookMarked;
+    public boolean isBookmarked() {
+        return isBookmarked;
     }
 
-    public void setBookMarked(boolean bookMarked) {
-        this.isBookMarked = bookMarked;
+    public void setBookmarked(boolean isBookmarked) {
+        this.isBookmarked = isBookmarked;
     }
 
-    private boolean isBookMarked;
+    private boolean isBookmarked;
 
 
 }

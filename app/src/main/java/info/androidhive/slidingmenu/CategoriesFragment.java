@@ -14,7 +14,7 @@ import android.widget.GridView;
 
 import java.util.ArrayList;
 
-import info.androidhive.slidingmenu.adapter.CategoriesAdaptor;
+import info.androidhive.slidingmenu.adapter.WordCategoriesAdaptor;
 import info.androidhive.slidingmenu.model.CategoriesItem;
 import info.androidhive.slidingmenu.model.WordModel.Categories;
 
@@ -52,19 +52,18 @@ public class CategoriesFragment extends Fragment {
 
         gridView = (GridView) rootView.findViewById(R.id.gridView1);
 
-         categoriesInEnglish=getActivity().getResources().getStringArray(R.array.categories_english);
-          categoriesInGerman=getActivity().getResources().getStringArray(R.array.categories_german);
-          iconForCategory=getActivity().getResources().obtainTypedArray(R.array.categories_icon);
+ iconForCategory=getActivity().getResources().obtainTypedArray(R.array.categories_icon);
 
         categoriesItems = new ArrayList<CategoriesItem>();
 
+        int i=0;
        for (Categories c:MainActivity.wordByCategories){
 
-           categoriesItems.add(new CategoriesItem(c.getCatEng(),iconForCategory.getResourceId(1, -1),c.getCatGer()));
+           categoriesItems.add(new CategoriesItem(c.getCatEng(),iconForCategory.getResourceId(i++, -1),c.getCatGer()));
 
        }
 
-        gridView.setAdapter(new CategoriesAdaptor(getActivity(),categoriesItems));
+        gridView.setAdapter(new WordCategoriesAdaptor(getActivity(),categoriesItems));
 
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -75,8 +74,6 @@ public class CategoriesFragment extends Fragment {
 
                 Bundle bundle=new Bundle();
                 bundle.putInt("categoryID",position);
-
-
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.addToBackStack(null);

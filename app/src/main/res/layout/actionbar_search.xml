@@ -6,7 +6,7 @@
 
     android:focusable="true" >
 
-    <info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView
+    <info.androidhive.slidingmenu.Search.ClearableAutoCompleteTextView
         android:id="@+id/search_box"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +15,7 @@
 
         android:dropDownWidth="match_parent"
         android:inputType="textAutoComplete" >
-    </info.androidhive.slidingmenu.WordSearch.ClearableAutoCompleteTextView>
+    </info.androidhive.slidingmenu.Search.ClearableAutoCompleteTextView>
 
     <ImageView
         android:layout_width="wrap_content"

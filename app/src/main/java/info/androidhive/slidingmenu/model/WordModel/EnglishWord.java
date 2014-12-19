@@ -6,7 +6,7 @@ import com.orm.SugarRecord;
 /**
  * Created by ajit on 05.12.14.
  */
-public class EnglishWord extends SugarRecord<Categories> {
+public class EnglishWord   {
     private String word;
 
     public String getGen() {
@@ -24,6 +24,18 @@ public class EnglishWord extends SugarRecord<Categories> {
     public void setWord(String word) {
         this.word = word;
     }
+
+    public short getWordId() {
+        return wordId;
+    }
+
+    public void setWordId(short wordId) {
+        this.wordId = wordId;
+    }
+
+    private short wordId;
+
+
     private String gen;
 
 }

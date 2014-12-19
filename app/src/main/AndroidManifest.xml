@@ -6,7 +6,9 @@
     android:versionName="1.0" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
@@ -27,7 +29,52 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="info.androidhive.slidingmenu.Games.Hangman.gameplay.HangmanMainActivity"
+            android:label="@string/app_name" >
 
+        </activity>
+        <activity
+            android:name="info.androidhive.slidingmenu.Games.Hangman.highscore.HighScoreActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="info.androidhive.slidingmenu.Games.Hangman.settings.SettingsActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+
+        <activity android:name="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordSearchActivity" android:label="@string/app_name"
+            android:theme="@style/themeBase"
+            android:launchMode="singleTask">
+
+        </activity>
+        <activity android:name=".CrashActivity" android:theme="@style/themeBase"
+            android:windowSoftInputMode="adjustResize" />
+        <provider android:name="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordDictionaryProvider"
+            android:authorities="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordDictionaryProvider" />
+        <activity android:name="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordListActivity" android:label="@string/wordlist_name"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.dahl.brendan.word" />
+            </intent-filter>
+        </activity>
+        <activity android:name="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.TutorialActivity" android:label="@string/tutorial"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordSearchPreferences"
+            android:theme="@android:style/Theme.Dialog" android:label="@string/options">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <service android:name="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.IOService" />
 
         <meta-data android:name="DATABASE" android:value="germanenglish.db" />
         <meta-data android:name="VERSION" android:value="2" />
