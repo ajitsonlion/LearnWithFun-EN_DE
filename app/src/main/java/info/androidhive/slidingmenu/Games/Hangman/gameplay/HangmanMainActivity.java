@@ -122,17 +122,19 @@ public class HangmanMainActivity extends Activity implements OnClickListener {
 		/* add buttons to gridview */
 		Button cb = null;
 		ArrayList<Button> mButtons = new ArrayList<Button>();
-		for (char buttonChar = 'A'; buttonChar <= 'Z'; buttonChar++) {
+
+        String[] keys={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Ä","Ü","Ö","ß"};
+		for (String key:keys) {
 			cb = new Button(this);
-			cb.setText("" + buttonChar);
+			cb.setText("" + key);
 			cb.setPadding(0, 0, 0, 0);
-			cb.setId(buttonChar);
+			cb.setId(key.charAt(0));
 
 			cb.setTextColor(Color.parseColor("white"));
 			cb.setTextSize(25);
 			cb.setOnClickListener(this);
 			cb.setBackgroundColor(Color.parseColor("red"));
-			if (guessedLetters.contains("" + buttonChar)) {
+			if (guessedLetters.contains("" + key)) {
 				cb.setBackgroundColor(Color.parseColor("#858585"));
 				cb.setOnClickListener(null);
 			}

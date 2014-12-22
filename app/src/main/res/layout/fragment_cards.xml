@@ -27,9 +27,9 @@
             ProgressWheel:text="20"
             ProgressWheel:textColor="#FFF"
             ProgressWheel:textSize="30sp"
-            ProgressWheel:rimColor="@color/md_grey_500"
+            ProgressWheel:rimColor="@color/md_grey_50"
             ProgressWheel:barLength="60dp"
-            ProgressWheel:barColor="@color/md_cyan_300"
+            ProgressWheel:barColor="@color/md_blue_600"
             ProgressWheel:barWidth="5dp"
             ProgressWheel:rimWidth="2dp"
             android:layout_alignParentEnd="true" />

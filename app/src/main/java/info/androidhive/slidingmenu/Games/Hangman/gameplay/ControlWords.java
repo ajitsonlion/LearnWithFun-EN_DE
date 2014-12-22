@@ -20,16 +20,11 @@ public class ControlWords {
             for (FlashCard card:c.getCards()){
 
                String word=card.getGer().getWord();
-               if (word.matches("/^[A-z]+$/")){
-
-
-               }
                 words.add(word);
 
             }
 
         }
-
 		
 		return words;
 	}
