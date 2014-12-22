@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
-        jumboMode="false"
-        revision="21.0.2"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
-        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-c069eefc9a6099952d1159a48ae03ac18927c663.jar" />
-    </item>
-    <item
         jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/libs/gson-2.2.4.jar"
         jumboMode="false"
         revision="21.0.2"
         sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
         <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/gson-2.2.4-08b7eb49244ec2bccb63ebb71c482f4e4162178b.jar" />
+    </item>
+    <item
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-c069eefc9a6099952d1159a48ae03ac18927c663.jar" />
     </item>
     <item
         jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/libs/libGoogleAnalytics.jar"
@@ -49,6 +49,13 @@
         revision="21.0.2"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
         <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-0d982ffa683eba8c3ae90641fcaa7a41d9ed4b6a.jar" />
+    </item>
+    <item
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/me.grantland/autofittextview/0.2.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="81db45283d36bfc6e3380c325fb09b2283f36775">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-8c51c91d30a40800511268f91a968b04b78c4332.jar" />
     </item>
 
 </items>

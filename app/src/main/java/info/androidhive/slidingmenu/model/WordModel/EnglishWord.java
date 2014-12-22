@@ -25,15 +25,16 @@ public class EnglishWord   {
         this.word = word;
     }
 
-    public short getWordId() {
-        return wordId;
+
+    public short getId() {
+        return id;
     }
 
-    public void setWordId(short wordId) {
-        this.wordId = wordId;
+    public void setId(short id) {
+        this.id = id;
     }
 
-    private short wordId;
+    private short id;
 
 
     private String gen;

@@ -52,14 +52,14 @@ public class CategoriesFragment extends Fragment {
 
         gridView = (GridView) rootView.findViewById(R.id.gridView1);
 
- iconForCategory=getActivity().getResources().obtainTypedArray(R.array.categories_icon);
+    iconForCategory=getActivity().getResources().obtainTypedArray(R.array.categories_icon);
 
         categoriesItems = new ArrayList<CategoriesItem>();
 
         int i=0;
        for (Categories c:MainActivity.wordByCategories){
 
-           categoriesItems.add(new CategoriesItem(c.getCatEng(),iconForCategory.getResourceId(i++, -1),c.getCatGer()));
+           categoriesItems.add(new CategoriesItem(c.getEng(),iconForCategory.getResourceId(i++, -1),c.getGer()));
 
        }
 

@@ -19,10 +19,9 @@
         android:layout_marginRight="5dp"
         android:paddingTop="5dp" />
 
-    <TextView
+    <me.grantland.widget.AutofitTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/textView_english_categories"
         android:layout_gravity="center_horizontal"
@@ -32,11 +31,10 @@
         android:gravity="center_vertical|center_horizontal"
         android:layout_marginTop="2dp" />
 
-    <TextView
+    <me.grantland.widget.AutofitTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
+         android:text="Small Text"
         android:ellipsize="none"
         android:maxLines="1"
         android:scrollHorizontally="false"

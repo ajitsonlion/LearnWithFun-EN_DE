@@ -3,27 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:textAlignment="gravity"
-    android:layout_margin="5dp"
+    android:layout_marginBottom="2dp"
     android:weightSum="2">
  
     <TextView
         android:id="@+id/search_item_venue_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-         android:textSize="12sp"
+        android:textSize="20sp"
         android:layout_weight="1"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"  />
+        android:paddingBottom="2dp"  />
  
     <TextView
         android:id="@+id/search_item_venue_address"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:layout_weight="1"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp" />
+        android:paddingBottom="2dp" />
  
 </LinearLayout>

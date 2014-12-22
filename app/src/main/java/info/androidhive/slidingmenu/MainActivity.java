@@ -67,8 +67,8 @@ public class MainActivity extends Activity     {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-        wordByCategories=new ArrayList<Categories>();
 
+        if (wordByCategories==null)
         new GetWordsInBackground().execute();
 
 		setContentView(R.layout.activity_main);
@@ -95,11 +95,11 @@ public class MainActivity extends Activity     {
 		// Photos
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
 		// Communities, Will add a counter here
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "22"));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
 		// Pages
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
 		// What's hot, We  will add a counter here
-		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
 		
 
 		// Recycle the typed array
@@ -172,10 +172,6 @@ public class MainActivity extends Activity     {
         });
 
         actionBar.setCustomView(v);
-
-
-        
-        
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 	}
@@ -195,6 +191,7 @@ public class MainActivity extends Activity     {
             // hide the keyboard
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(searchBox.getWindowToken(), 0);
+            getActionBar().setDisplayShowHomeEnabled(true);
         } else {
             // hide search icon and show search box
             searchIcon.setVisibility(View.GONE);
@@ -203,6 +200,8 @@ public class MainActivity extends Activity     {
             // show the keyboard
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.showSoftInput(searchBox, InputMethodManager.SHOW_IMPLICIT);
+            getActionBar().setDisplayShowHomeEnabled(false);
+
         }
 
     }
@@ -348,12 +347,8 @@ public class MainActivity extends Activity     {
         protected Void doInBackground(Void... params) {
             try {
 
-                // Connect to the web site
-
-
-                //    wordByCategories= (ArrayList<Categories>) Categories.listAll(Categories.class);
-
-                //     if (wordByCategories.isEmpty()){
+                wordByCategories=new ArrayList<Categories>();
+                wordsDatabase=new ArrayList<FlashCard>();
 
                             BufferedReader reader = null;
                             try {
@@ -367,25 +362,11 @@ public class MainActivity extends Activity     {
                             wordByCategories = gson.fromJson(reader, new TypeToken<ArrayList<Categories>>() {
                             }.getType());
 
-                //     for (Categories c : wordByCategories) {
-                //          c.save();
-                //           for (FlashCard card:c.getCards()){
-                //                 card.setCategoryID(c.getId());
-                //                 card.getEng().save();
-                //                  card.getGer().save();
-                //                   card.save();
-                //              }
-                //          }
-                //    }
 
                 for(Categories c:wordByCategories){
 
                     wordsDatabase.addAll(c.getCards());
                 }
-
-
-
-
 
 
             } catch (Exception e) {
@@ -398,7 +379,6 @@ public class MainActivity extends Activity     {
         @Override
         protected void onPostExecute(Void result) {
             // Set title into TextView
-
 
             searchInDictionary = new SearchInDictionary(getApplicationContext(), wordsDatabase);
 

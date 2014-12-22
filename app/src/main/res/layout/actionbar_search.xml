@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="fill_horizontal"
-
-    android:focusable="true" >
+     android:focusable="true" >
 
     <info.androidhive.slidingmenu.Search.ClearableAutoCompleteTextView
         android:id="@+id/search_box"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:dropDownVerticalOffset="5dp"
+        android:layout_marginLeft="-10dp"
 
         android:dropDownWidth="match_parent"
         android:inputType="textAutoComplete" >
@@ -24,9 +23,7 @@
         android:id="@+id/search_icon"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentStart="false"
-        android:adjustViewBounds="false" />
+         android:layout_alignParentBottom="false"
+         android:adjustViewBounds="false" />
 
 </RelativeLayout>

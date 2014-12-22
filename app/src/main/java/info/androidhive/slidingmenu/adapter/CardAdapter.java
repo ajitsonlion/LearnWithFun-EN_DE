@@ -69,7 +69,7 @@ public class CardAdapter extends ArrayAdapter<FlashCard> {
         ImageView iconSpeak=(ImageView)rowView.findViewById(R.id.icon_speak);
         final FlashCard flashCard= flashCards.get(position);
 
-       final boolean bookmark= Prefs.getBoolean("card_"+flashCard.getCrdID(),false);
+       final boolean bookmark= Prefs.getBoolean("card_"+flashCard.getId(),false);
 
        if(bookmark){
            bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_yes));
@@ -113,12 +113,12 @@ public class CardAdapter extends ArrayAdapter<FlashCard> {
             private void toggleBookmark() {
                 if(bookmark){
 
-                    Prefs.putBoolean("card_"+flashCard.getCrdID(),false);
+                    Prefs.putBoolean("card_"+flashCard.getId(),false);
                     bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_no));
                     Toast.makeText(context,"Removed to Bookmarked "+flashCard.getGer().getWord(),Toast.LENGTH_SHORT).show();
                  }
                 else {
-                     Prefs.putBoolean("card_" + flashCard.getCrdID(), true);
+                     Prefs.putBoolean("card_" + flashCard.getId(), true);
                     bookmarkIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_bookmarked_yes));
                     Toast.makeText(context,"Added from Bookmarked "+flashCard.getGer().getWord(),Toast.LENGTH_SHORT).show();
                 }

@@ -9,6 +9,7 @@ import com.pixplicity.easyprefs.library.Prefs;
 public class FlashCard     {
 
 
+
     public GermanWord getGer() {
         return ger;
     }
@@ -28,25 +29,16 @@ public class FlashCard     {
     private GermanWord ger;
     private EnglishWord eng;
 
-    public long getCrdID() {
-        return crdID;
+
+    public short getId() {
+        return id;
     }
 
-    public void setCrdID(long crdID) {
-        this.crdID = crdID;
+    public void setId(short id) {
+        this.id = id;
     }
 
-    private long crdID;
-
-    public boolean isBookmarked() {
-        return isBookmarked;
-    }
-
-    public void setBookmarked(boolean isBookmarked) {
-        this.isBookmarked = isBookmarked;
-    }
-
-    private boolean isBookmarked;
+    private short id;
 
 
 }

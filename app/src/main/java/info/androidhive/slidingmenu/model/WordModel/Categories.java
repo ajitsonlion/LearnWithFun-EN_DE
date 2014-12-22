@@ -14,13 +14,6 @@ import java.util.List;
  */
 public class Categories   {
 
-    public String getCatEng() {
-        return catEng;
-    }
-
-    public void setCatEng(String catEng) {
-        this.catEng = catEng;
-    }
 
     public ArrayList<FlashCard> getCards() {
         return cards;
@@ -30,27 +23,36 @@ public class Categories   {
         this.cards = cards;
     }
 
-    private String catEng;
-
-    public String getCatGer() {
-        return catGer;
+    public String getEng() {
+        return eng;
     }
 
-    public void setCatGer(String catGer) {
-        this.catGer = catGer;
+    public void setEng(String eng) {
+        this.eng = eng;
     }
 
-    private String catGer;
+    private String eng;
+
+
+    public String getGer() {
+        return ger;
+    }
+
+    public void setGer(String ger) {
+        this.ger = ger;
+    }
+
+    private String ger;
     private ArrayList<FlashCard> cards;
 
 
-    public short getCatID() {
-        return catID;
+    public short getId() {
+        return id;
     }
 
-    public void setCatID(short catID) {
-        this.catID = catID;
+    public void setId(short id) {
+        this.id = id;
     }
 
-    private short catID;
+    private short id;
 }
