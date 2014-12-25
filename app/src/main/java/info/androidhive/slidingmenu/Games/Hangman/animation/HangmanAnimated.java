@@ -16,11 +16,9 @@ public class  HangmanAnimated {
 	private int currentFrame; // the current frame
 	private long frameTicker; // the time of the last frame update
 	private int framePeriod; // milliseconds between each frame (1000/fps)
-
 	private int spriteWidth; // the width of the sprite to calculate the cut out
 							// rectangle
 	private int spriteHeight; // the height of the sprite
-
 	private int x; // the X coordinate of the object (top left of the image)
 	private int y; // the Y coordinate of the object (top left of the image)
 
@@ -37,8 +35,6 @@ public class  HangmanAnimated {
 		framePeriod = 1000 / fps;
 		frameTicker = 0l;
 	}
-	
-
 	public Bitmap getBitmap() {
 		return bitmap;
 	}
