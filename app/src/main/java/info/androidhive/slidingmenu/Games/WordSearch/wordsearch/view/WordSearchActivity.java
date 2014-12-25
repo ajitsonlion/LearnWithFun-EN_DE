@@ -61,8 +61,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-import info.androidhive.slidingmenu.Games.WordSearch.util.AnalyticsTask;
-import info.androidhive.slidingmenu.Games.WordSearch.wordsearch.Constants;
+ import info.androidhive.slidingmenu.Games.WordSearch.wordsearch.Constants;
 import info.androidhive.slidingmenu.Games.WordSearch.wordsearch.model.HighScore;
 import info.androidhive.slidingmenu.Games.WordSearch.wordsearch.util.AndroidHttpClient;
 import info.androidhive.slidingmenu.Games.WordSearch.wordsearch.util.ConversionUtil;
@@ -394,12 +393,7 @@ public class WordSearchActivity extends Activity {
 		} catch (NameNotFoundException e) {
 			appVer = "unknown";
 		}
-		try {
-			AnalyticsTask analytics = new AnalyticsTask(this, true);
-			analytics.execute(new String[] {"/WordSearchActivity"});
-		} catch (RuntimeException re) {
-			Log.e(LOG_TAG, "tracker failed!");
-		} catch (Exception e) {
+		  catch (Exception e) {
 			Log.e(LOG_TAG, "tracker failed!");
 		}
 		setContentView(R.layout.wordsearch_main);
@@ -694,31 +688,7 @@ public class WordSearchActivity extends Activity {
 		}
 	}
 
-	public void trackGame() {
-		try {
-			String category = control.getPrefs().getCategory();
-			String input = "Tap";
-			if (control.getPrefs().getTouchMode()) {
-				input = "Drag";
-			}
-			AnalyticsTask analytics = new AnalyticsTask(this, false);
-			analytics.execute(new String[] {category, input, Integer.toString(control.getGridSize())});
-		} catch (RuntimeException re) {
-			Log.e(LOG_TAG, "tracker failed!");
-		} catch (Exception e) {
-			Log.e(LOG_TAG, "tracker failed!");
-		}
-	}
 
-	public void trackReplay() {
-		try {
-			String category = control.getPrefs().getCategory();
-			AnalyticsTask analytics = new AnalyticsTask(this, false);
-			analytics.execute(new String[] {category, "replay", Integer.toString(control.getGridSize())});
-		} catch (RuntimeException re) {
-			Log.e(LOG_TAG, "tracker failed!");
-		} catch (Exception e) {
-			Log.e(LOG_TAG, "tracker failed!");
-		}
-	}
+
+
 }

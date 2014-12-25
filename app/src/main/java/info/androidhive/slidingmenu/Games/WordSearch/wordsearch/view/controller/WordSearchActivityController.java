@@ -269,8 +269,7 @@ public class WordSearchActivityController implements SharedPreferences.OnSharedP
 		hs = null;
 		this.setGrid(grid);
 		updateTheme();
-		wordSearch.trackGame();
-		this.prefs.increaseGamePlayCount();
+ 		this.prefs.increaseGamePlayCount();
 	}
 
 	public void resetGrid() {
@@ -279,9 +278,7 @@ public class WordSearchActivityController implements SharedPreferences.OnSharedP
 		this.updateTheme();
 		timeSum = 0L;
 		hs = null;
-		wordSearch.trackReplay();
-		wordSearch.trackGame();
-	}
+ 	}
 
 	public void restoreState(Bundle inState) {
 		if (inState != null) {
