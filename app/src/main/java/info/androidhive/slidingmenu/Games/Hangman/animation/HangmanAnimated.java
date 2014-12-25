@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 
-public class HangmanAnimated {
+public class  HangmanAnimated {
 
 	private Bitmap bitmap; // the animation sequence
 	private Rect sourceRect; // the rectangle to be drawn from the animation

@@ -38,11 +38,12 @@
  <view
      android:id="@+id/animation"
      android:layout_width="match_parent"
-     android:layout_height="fill_parent"
+     android:layout_height="match_parent"
      android:layout_above="@+id/moves"
      android:layout_below="@+id/word"
      android:layout_centerHorizontal="true"
-     class="info.androidhive.slidingmenu.Games.Hangman.animation.Animation" />
+     class="info.androidhive.slidingmenu.Games.Hangman.animation.Animation"
+      />
 
    <TextView
        android:id="@+id/moves"
@@ -60,7 +61,5 @@
         android:src="@android:drawable/ic_menu_preferences"
         android:layout_below="@+id/word"
         android:layout_alignParentEnd="true" />
-
-
 
 </RelativeLayout>

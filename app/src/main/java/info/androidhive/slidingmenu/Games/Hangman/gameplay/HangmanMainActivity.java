@@ -129,7 +129,6 @@ public class HangmanMainActivity extends Activity implements OnClickListener {
 			cb.setText("" + key);
 			cb.setPadding(0, 0, 0, 0);
 			cb.setId(key.charAt(0));
-
 			cb.setTextColor(Color.parseColor("white"));
 			cb.setTextSize(25);
 			cb.setOnClickListener(this);

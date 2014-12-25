@@ -2,32 +2,81 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Ajit\.gradle\caches\modules-2\files-2.1\com.github.nkzawa\engine.io-client\0.3.1\3ca9d0d53a27ecb88538ed874be417cfa827db5d\engine.io-client-0.3.1.jar"
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/libs/gson-2.2.4.jar"
         jumboMode="false"
         revision="21.0.2"
-        sha1="3ca9d0d53a27ecb88538ed874be417cfa827db5d">
-        <dex dex="C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\engine.io-client-0.3.1-6b7fbc5d48f58ddb0b05e371923c22a89cb3fa28.jar" />
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/gson-2.2.4-08b7eb49244ec2bccb63ebb71c482f4e4162178b.jar" />
     </item>
     <item
-        jar="C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\exploded-aar\me.grantland\autofittextview\0.2.0\classes.jar"
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
         jumboMode="false"
         revision="21.0.2"
-        sha1="81db45283d36bfc6e3380c325fb09b2283f36775">
-        <dex dex="C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\classes-d6f9b19a20a4482dd88c3f553dcb5c282fcd7144.jar" />
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-c069eefc9a6099952d1159a48ae03ac18927c663.jar" />
     </item>
     <item
-        jar="C:\Users\Ajit\.gradle\caches\modules-2\files-2.1\org.java-websocket\Java-WebSocket\1.3.0\db2658f013fb163de4a99274c2eb9e17efe535d2\Java-WebSocket-1.3.0.jar"
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.0.2"
-        sha1="db2658f013fb163de4a99274c2eb9e17efe535d2">
-        <dex dex="C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\Java-WebSocket-1.3.0-79062f4d3c2e41a44103e4f519f460933bf53231.jar" />
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-100bdf00c42a3d3c09f6be2a45a9f6d7e5f077c5.jar" />
     </item>
     <item
-        jar="C:\Users\Ajit\.gradle\caches\modules-2\files-2.1\com.github.nkzawa\socket.io-client\0.3.0\8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9\socket.io-client-0.3.0.jar"
+        jar="/home/ajit/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.3.0/8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9/socket.io-client-0.3.0.jar"
         jumboMode="false"
         revision="21.0.2"
         sha1="8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9">
-        <dex dex="C:\Users\Ajit\AndroidStudioProjects\LearnWithFun-EN_DE\app\build\intermediates\pre-dexed\debug\socket.io-client-0.3.0-cb0449824f580911cab97b87ad247651d841fbce.jar" />
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/socket.io-client-0.3.0-57a84432fa4f8f32863841e73559c93f933e5f4d.jar" />
+    </item>
+    <item
+        jar="/home/ajit/.gradle/caches/modules-2/files-2.1/org.java-websocket/Java-WebSocket/1.3.0/db2658f013fb163de4a99274c2eb9e17efe535d2/Java-WebSocket-1.3.0.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="db2658f013fb163de4a99274c2eb9e17efe535d2">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/Java-WebSocket-1.3.0-09333a1c689ac1911e1f9b9b9d808fd0ad8dfdc4.jar" />
+    </item>
+    <item
+        jar="/home/ajit/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/engine.io-client/0.3.1/3ca9d0d53a27ecb88538ed874be417cfa827db5d/engine.io-client-0.3.1.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="3ca9d0d53a27ecb88538ed874be417cfa827db5d">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/engine.io-client-0.3.1-73e3a827f79adde92e8fa03b7707154223e666b2.jar" />
+    </item>
+    <item
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/libs/libGoogleAnalytics.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="4941a4bb43719931bdbcb1588efba53b273edd1f">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/libGoogleAnalytics-0a23a38960d58ce0e5cbba14870294bb0fe27d3c.jar" />
+    </item>
+    <item
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/com.github.satyan/sugar/1.3/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="07e07903922250dabf50c7d131d6fa069a050305">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-dae31968cc1b65c8659c9a9fbeb66bd4f39c65d2.jar" />
+    </item>
+    <item
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/com.pixplicity.easyprefs/library/1.3/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="21c1328739dffb33d813be606d4b353465a89031">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-b4fe2f2e84dab52997241a2d077267d4ad24ead8.jar" />
+    </item>
+    <item
+        jar="/home/ajit/android sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-0d982ffa683eba8c3ae90641fcaa7a41d9ed4b6a.jar" />
+    </item>
+    <item
+        jar="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/exploded-aar/me.grantland/autofittextview/0.2.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="81db45283d36bfc6e3380c325fb09b2283f36775">
+        <dex dex="/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-8c51c91d30a40800511268f91a968b04b78c4332.jar" />
     </item>
 
 </items>
