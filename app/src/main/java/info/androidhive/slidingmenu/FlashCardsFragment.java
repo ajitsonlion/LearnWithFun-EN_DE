@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import info.androidhive.slidingmenu.Search.ClearableAutoCompleteTextView;
 import info.androidhive.slidingmenu.Search.SearchInDictionary;
 import info.androidhive.slidingmenu.adapter.CardAdapter;
-import info.androidhive.slidingmenu.cardUI.ProgressWheel;
-import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
+import info.androidhive.slidingmenu.CustomUI.ProgressWheel;
+import info.androidhive.slidingmenu.CustomUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.WordModel.Categories;
 import info.androidhive.slidingmenu.model.WordModel.FlashCard;
 

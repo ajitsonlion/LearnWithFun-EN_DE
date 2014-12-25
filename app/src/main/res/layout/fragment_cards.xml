@@ -20,7 +20,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
-        <info.androidhive.slidingmenu.cardUI.ProgressWheel
+        <info.androidhive.slidingmenu.CustomUI.ProgressWheel
             android:id="@+id/pw_spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -31,7 +31,7 @@
             ProgressWheel:barLength="60dp"
             ProgressWheel:barColor="@color/md_blue_600"
             ProgressWheel:barWidth="5dp"
-            ProgressWheel:rimWidth="2dp"
+            ProgressWheel:rimWidth="10dp"
             android:layout_alignParentEnd="true" />
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
 
     </RelativeLayout>
 
-    <info.androidhive.slidingmenu.cardUI.SingleScrollListView
+    <info.androidhive.slidingmenu.CustomUI.SingleScrollListView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/flip_view"
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
         android:layout_marginBottom="10dp"
         android:layout_weight="20">
 
-    </info.androidhive.slidingmenu.cardUI.SingleScrollListView>
+    </info.androidhive.slidingmenu.CustomUI.SingleScrollListView>
 
     <RelativeLayout
         android:layout_width="fill_parent"

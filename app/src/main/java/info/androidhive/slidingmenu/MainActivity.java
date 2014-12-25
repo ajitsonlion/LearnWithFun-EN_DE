@@ -3,7 +3,7 @@ package info.androidhive.slidingmenu;
 import info.androidhive.slidingmenu.Search.ClearableAutoCompleteTextView;
 import info.androidhive.slidingmenu.Search.SearchInDictionary;
 import info.androidhive.slidingmenu.adapter.NavDrawerListAdapter;
-import info.androidhive.slidingmenu.cardUI.SingleScrollListView;
+import info.androidhive.slidingmenu.CustomUI.SingleScrollListView;
 import info.androidhive.slidingmenu.model.NavDrawerItem;
 import info.androidhive.slidingmenu.model.WordModel.Categories;
 import info.androidhive.slidingmenu.model.WordModel.FlashCard;

@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:gravity="right"
     android:orientation="vertical" 
-    android:background="@layout/gradient">
+    >
 
     <!-- Show Preference in ListView  -->
 

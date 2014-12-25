@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
  import info.androidhive.slidingmenu.ListeningHearing.SpeakWord;
 import info.androidhive.slidingmenu.R;
-import info.androidhive.slidingmenu.cardUI.FlipAnimation;
+import info.androidhive.slidingmenu.CustomUI.FlipAnimation;
 import info.androidhive.slidingmenu.model.WordModel.FlashCard;
 
 

@@ -1,0 +1,23 @@
+<!-- [ Mirror metadata ] generatedAt: 1419370938854 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/cardslayout">
+        <!-- TextView Examples:
+        <textViewArticle text="@string/string_resource" />
+        <textViewArticle text="Text literal" textSize="14sp" /> -->
+        <textViewArticle />
+        <germanWord />
+        <!-- ImageView Examples:
+        <icon_speak src="@drawable/image_resource" />
+        <icon_speak src="relative_path/image.jpg" /> -->
+        <icon_speak />
+        <flip_icon_front />
+        <imageViewBookmark />
+        <flip_icon_back />
+        <englishWord />
+    </_content>
+</screen>

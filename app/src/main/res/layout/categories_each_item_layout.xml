@@ -15,8 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView_categories"
         android:src="@drawable/ic_fruits_and_vegetables"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+
         android:paddingTop="5dp" />
 
     <me.grantland.widget.AutofitTextView
@@ -29,7 +28,7 @@
         android:maxLines="1"
         android:scrollHorizontally="false"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="2dp" />
+        android:paddingTop="2dp" />
 
     <me.grantland.widget.AutofitTextView
         android:layout_width="match_parent"
@@ -41,7 +40,7 @@
         android:id="@+id/textView_german_categories"
         android:layout_gravity="center"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="2dp" />
+        android:paddingTop="2dp" />
 
 
 </LinearLayout>

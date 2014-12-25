@@ -1,0 +1,15 @@
+<!-- [ Mirror metadata ] generatedAt: 1419370939127 -->
+<!-- Generated screen file. Fill the id tags below with content with
+which to populate your previewed layout. For a complete specification
+of sample data, please see http://jimulabs.com/sample-data-specifications/ 
+
+Valid attributes on <screen> tag: theme="@style/someTheme" inEditMode="false" overlay="@drawable/mockup" -->
+<screen>
+    <_content layout="@layout/hang_man_activity_highscore">
+        <!-- TextView Examples:
+        <high_head text="@string/string_resource" />
+        <high_head text="Text literal" textSize="14sp" /> -->
+        <high_head />
+        <high_scores_list />
+    </_content>
+</screen>
