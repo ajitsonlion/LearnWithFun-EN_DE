@@ -26,4 +26,5 @@ dependencies {
     compile 'me.grantland:autofittextview:0.2.+'
     compile 'com.github.nkzawa:socket.io-client:0.3.0'
     compile files('libs/libGoogleAnalytics.jar')
+    compile files('libs/GoogleAdMobAdsSdk-4.1.0.jar')
 }

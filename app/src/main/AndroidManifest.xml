@@ -29,20 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="info.androidhive.slidingmenu.Games.Hangman.gameplay.HangmanMainActivity"
-            android:label="@string/app_name" >
 
-        </activity>
-        <activity
-            android:name="info.androidhive.slidingmenu.Games.Hangman.highscore.HighScoreActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="info.androidhive.slidingmenu.Games.Hangman.settings.SettingsActivity"
-            android:label="@string/app_name" >
-
-        </activity>
 
         <activity android:name="info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordSearchActivity" android:label="@string/app_name"
             android:theme="@style/themeBase"

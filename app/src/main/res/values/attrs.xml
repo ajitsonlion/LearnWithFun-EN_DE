@@ -16,4 +16,6 @@
         <attr name="contourColor" format="color"/>
         <attr name="contourSize" format="float"/>
     </declare-styleable>
+
+
 </resources>

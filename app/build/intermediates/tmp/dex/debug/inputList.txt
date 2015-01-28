@@ -5,6 +5,7 @@
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/libGoogleAnalytics-0a23a38960d58ce0e5cbba14870294bb0fe27d3c.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/classes-dae31968cc1b65c8659c9a9fbeb66bd4f39c65d2.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/socket.io-client-0.3.0-57a84432fa4f8f32863841e73559c93f933e5f4d.jar
+/home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/GoogleAdMobAdsSdk-4.1.0-01bbfa6e2c01df5e879a7f4875d9d52ac8811847.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/engine.io-client-0.3.1-73e3a827f79adde92e8fa03b7707154223e666b2.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/Java-WebSocket-1.3.0-09333a1c689ac1911e1f9b9b9d808fd0ad8dfdc4.jar
 /home/ajit/AndroidStudioProjects/VocabWithFun/app/build/intermediates/pre-dexed/debug/gson-2.2.4-08b7eb49244ec2bccb63ebb71c482f4e4162178b.jar

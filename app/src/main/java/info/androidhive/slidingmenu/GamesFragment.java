@@ -17,8 +17,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
- import info.androidhive.slidingmenu.Games.Hangman.gameplay.HangmanMainActivity;
-import info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordSearchActivity;
+ import info.androidhive.slidingmenu.Games.WordSearch.wordsearch.view.WordSearchActivity;
 import info.androidhive.slidingmenu.adapter.WordCategoriesAdaptor;
 import info.androidhive.slidingmenu.model.CategoriesItem;
 
@@ -81,17 +80,14 @@ public class GamesFragment extends Fragment {
                 Intent myIntent;
                 switch (position){
 
-                    case 0:
-                          myIntent = new Intent(getActivity(), HangmanMainActivity.class);
-                        getActivity().startActivity(myIntent);
-                        break;
+
                     case 1:
                          myIntent = new Intent(getActivity(), WordSearchActivity.class);
                         getActivity().startActivity(myIntent);
                         break;
 
                     default:
-                        myIntent = new Intent(getActivity(), HangmanMainActivity.class);
+                        myIntent = new Intent(getActivity(), WordSearchActivity.class);
                         getActivity().startActivity(myIntent);
                         break;
                 }
